@@ -47,7 +47,7 @@ namespace SeguroAPI.Controllers
 
             _context.Asegurados.Add(asegurado);
             await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetAsegurado), new { id = asegurado.NumeroIdentificacion }, asegurado);
+            return Ok(asegurado);
         }
 
         // Actualizar asegurado
