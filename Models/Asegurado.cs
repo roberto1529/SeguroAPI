@@ -7,7 +7,7 @@ namespace SeguroAPI.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)] // Evita que sea IDENTITY
-        [StringLength(12, MinimumLength = 12, ErrorMessage = "El número de identificación debe tener exactamente 12 caracteres.")]
+        [StringLength(12, MinimumLength = 11, ErrorMessage = "El número de identificación debe tener exactamente 12 caracteres.")]
         [Required]
         public string NumeroIdentificacion { get; set; } = null!;
 
